@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>RainMood</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+            <audio id="myAudio">
+                    <source src="sounds/rain_on_umbrella.mp3" type="audio/mp3">
+                    
+                  </audio>
+        <div class="playing">
+           <div class="play-header">
+                <h2>Rain on Leaves</h2>                
+           </div>
+           <div class="play-btns">
+                <div class="play-btn"><a href="sounds.html"><img src="images/home.png"></a></div>
+                <div class="play-btn"><img src="images/plus.png"></div>
+                <div class="play-btn"><img src="images/bell.png"></div>
+           </div>
+
+           <div class="play-stop">
+                <div id="play"class="control"><img src="images/play.png"onclick="playAudio()" type="button"></div>
+                <div id="pause" style="display:none" class="control"><img src="images/pause.png"onclick="pauseAudio()" type="button"></div>
+                <div class="control"><h3>12:36</h3></div>
+           </div>
+
+           
+        </div>
+
+        <script>
+                var x = document.getElementById("myAudio"); 
+                
+                function playAudio() { 
+                    x.play(); 
+                    document.getElementById("play").style.display = 'none'; 
+                    document.getElementById("pause").style.display = 'block';
+                    
+                } 
+                
+                function pauseAudio() { 
+                    x.pause(); 
+                    document.getElementById("play").style.display = 'block';
+                    document.getElementById("pause").style.display = 'none'; 
+                } 
+                </script>
+
+    </body>
+</html>
